@@ -4,12 +4,14 @@
 def fizzbuzz_for_num(n):
     should_fizz = n % 3 == 0
     should_buzz = n % 5 == 0
+    fizz_word = "Fizz"
+    buzz_word = "Buzz"
     if should_fizz and should_buzz:
-        return "FizzBuzz"
+        return fizz_word + buzz_word
     elif should_fizz:
-        return "Fizz"
+        return fizz_word
     elif should_buzz:
-        return "Buzz"
+        return buzz_word
     else:
         return str(n)
 
