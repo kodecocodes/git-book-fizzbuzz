@@ -1,16 +1,21 @@
 #!/usr/bin/env python
 
 
+def fizzbuzz_for_num(n):
+    if n % 3 == 0 and n % 5 == 0:
+        return "FizzBuzz"
+    elif n % 3 == 0:
+        return "Fizz"
+    elif n % 5 == 0:
+        return "Buzz"
+    else:
+        return str(n)
+
+
 def fizzbuzz():
     for n in range(1, 101):
-        if n % 3 == 0 and n % 5 == 0:
-            print("FizzBuzz")
-        elif n % 3 == 0:
-            print("Fizz")
-        elif n % 5 == 0:
-            print("Buzz")
-        else:
-            print(n)
+        value = fizzbuzz_for_num(n)
+        print(value)
 
 
 def main():
