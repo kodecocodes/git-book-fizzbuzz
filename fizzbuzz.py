@@ -3,7 +3,9 @@
 
 def fizzbuzz_for_num(
     n,
+    fizz_divisor=3,
     fizz_word="Fizz",
+    buzz_divisor=5,
     buzz_word="Buzz",
 ):
     should_fizz = n % 3 == 0

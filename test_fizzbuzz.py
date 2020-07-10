@@ -34,6 +34,16 @@ class TestFizzBuzz(unittest.TestCase):
         with self.subTest(msg="Alternate Words: Divisible by Both"):
             self.assertEqual(fizzbuzz_for_num(15, fizz_word="Ab", buzz_word="Cd"), "AbCd")
 
+    def test_with_alternate_divisors(self):
+        with self.subTest(msg="Alternate Divisors: Divisible by None"):
+            self.assertEqual(fizzbuzz_for_num(1, fizz_divisor=7, buzz_divisor=11), "1")
+        with self.subTest(msg="Alternate Divisors: Divisible by First"):
+            self.assertEqual(fizzbuzz_for_num(7, fizz_divisor=7, buzz_divisor=11), "Fizz")
+        with self.subTest(msg="Alternate Divisors: Divisible by Second"):
+            self.assertEqual(fizzbuzz_for_num(11, fizz_divisor=7, buzz_divisor=11), "Buzz")
+        with self.subTest(msg="Alternate Divisors: Divisible by Both"):
+            self.assertEqual(fizzbuzz_for_num(77, fizz_divisor=7, buzz_divisor=11), "FizzBuzz")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
