@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
 
-def fizzbuzz_for_num(n):
+def fizzbuzz_for_num(
+    n,
+    fizz_word="Fizz",
+    buzz_word="Buzz",
+):
     should_fizz = n % 3 == 0
     should_buzz = n % 5 == 0
-    fizz_word = "Fizz"
-    buzz_word = "Buzz"
     if should_fizz and should_buzz:
         return fizz_word + buzz_word
     elif should_fizz:

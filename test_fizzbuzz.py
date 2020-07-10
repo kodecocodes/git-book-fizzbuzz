@@ -24,6 +24,16 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertEqual(fizzbuzz_for_num(15), "FizzBuzz")
         self.assertEqual(fizzbuzz_for_num(30), "FizzBuzz")
 
+    def test_with_alternate_words(self):
+        with self.subTest(msg="Alternate Words: Divisible by None"):
+            self.assertEqual(fizzbuzz_for_num(1, fizz_word="Ab", buzz_word="Cd"), "1")
+        with self.subTest(msg="Alternate Words: Divisible by Three"):
+            self.assertEqual(fizzbuzz_for_num(3, fizz_word="Ab", buzz_word="Cd"), "Ab")
+        with self.subTest(msg="Alternate Words: Divisible by Five"):
+            self.assertEqual(fizzbuzz_for_num(5, fizz_word="Ab", buzz_word="Cd"), "Cd")
+        with self.subTest(msg="Alternate Words: Divisible by Both"):
+            self.assertEqual(fizzbuzz_for_num(15, fizz_word="Ab", buzz_word="Cd"), "AbCd")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
