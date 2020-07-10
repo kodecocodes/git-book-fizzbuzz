@@ -2,11 +2,13 @@
 
 
 def fizzbuzz_for_num(n):
-    if n % 3 == 0 and n % 5 == 0:
+    should_fizz = n % 3 == 0
+    should_buzz = n % 5 == 0
+    if should_fizz and should_buzz:
         return "FizzBuzz"
-    elif n % 3 == 0:
+    elif should_fizz:
         return "Fizz"
-    elif n % 5 == 0:
+    elif should_buzz:
         return "Buzz"
     else:
         return str(n)
