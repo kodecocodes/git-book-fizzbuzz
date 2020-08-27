@@ -20,8 +20,8 @@ def fizzbuzz_for_num(
         return str(n)
 
 
-def fizzbuzz():
-    for n in range(1, 101):
+def fizzbuzz(start=1, end=100):
+    for n in range(start, end + 1):
         value = fizzbuzz_for_num(n)
         print(value)
 
