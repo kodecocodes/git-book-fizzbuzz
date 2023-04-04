@@ -8,8 +8,8 @@ def fizzbuzz_for_num(
     buzz_divisor=5,
     buzz_word="Buzz",
 ):
-    should_fizz = n % 3 == 0
-    should_buzz = n % 5 == 0
+    should_fizz = n % fizz_divisor == 0
+    should_buzz = n % buzz_divisor == 0
     if should_fizz and should_buzz:
         return fizz_word + buzz_word
     elif should_fizz:
